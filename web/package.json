@@ -5,6 +5,6 @@
 	],
 	"scripts": {
 		"start": "yarn --cwd packages/frontend start",
-		"build": "yarn --cwd packages/frontend build"
+		"build": "yarn install && yarn --cwd packages/frontend build"
 	}
 }
