@@ -5,8 +5,12 @@
   "license": "MIT",
   "scripts": {
     "start:dev": "nodemon server.js",
-    "start": "cd web && npm run build && cd .. && node server.js"
+    "start": "yarn --cwd packages/frontend build && node server.js"
   },
+  "private": true,
+	"workspaces": [
+		"packages/*"
+	],
   "dependencies": {
     "express": "^4.17.1",
     "express-ws": "^4.0.0"
