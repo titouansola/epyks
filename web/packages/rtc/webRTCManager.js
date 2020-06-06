@@ -21,7 +21,7 @@ export class WebRTCManager {
 	// WEBSOCKET METHODS
 	async createWebSocket() {
 		return new Promise(resolve => {
-			this.webSocket = new WebSocket('ws://localhost:3000');
+			this.webSocket = new WebSocket(`ws://${location.host}/ws`);
 	
 			this.webSocket.onopen = () => {
 				console.log('connection openned')

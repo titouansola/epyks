@@ -5,6 +5,7 @@ const server = require('http').createServer(app);
 
 const { app: wsApp } = require('express-ws')(app, server);
 
-wsApp.ws('/', handleSocketConnection);
+app.use('/', require('express').static('web/build'));
+wsApp.ws('/ws', handleSocketConnection);
 
-server.listen(3000, () => console.log('Server started'));
+server.listen(process.env.PORT || 3000, () => console.log('Server started'));

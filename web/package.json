@@ -4,6 +4,7 @@
 		"packages/*"
 	],
 	"scripts": {
-		"start": "yarn --cwd packages/frontend start"
+		"start": "yarn --cwd packages/frontend start",
+		"build": "yarn --cwd packages/frontend build"
 	}
 }
